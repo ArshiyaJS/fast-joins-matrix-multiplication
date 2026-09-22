@@ -1,0 +1,499 @@
+============================================================
+          FAST-JOINS CORRECTNESS & VALIDATION REPORT         
+============================================================
+
+============================================================
+TEST CASE     : test_happy_path [simple_hash]
+============================================================
+INPUTS        :
+df1:
+   key val_a
+0    1     a
+1    2     b
+2    3     c
+3    4     d
+df2:
+   key val_b
+0    3     x
+1    4     y
+2    5     z
+3    6     w
+
+EXPECTED      : Expected 2 inner join matches for keys 3 and 4.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Result row count and structure successfully match pandas inner join baseline.
+
+============================================================
+TEST CASE     : test_happy_path [grace_hash]
+============================================================
+INPUTS        :
+df1:
+   key val_a
+0    1     a
+1    2     b
+2    3     c
+3    4     d
+df2:
+   key val_b
+0    3     x
+1    4     y
+2    5     z
+3    6     w
+
+EXPECTED      : Expected 2 inner join matches for keys 3 and 4.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Result row count and structure successfully match pandas inner join baseline.
+
+============================================================
+TEST CASE     : test_happy_path [hybrid_hash]
+============================================================
+INPUTS        :
+df1:
+   key val_a
+0    1     a
+1    2     b
+2    3     c
+3    4     d
+df2:
+   key val_b
+0    3     x
+1    4     y
+2    5     z
+3    6     w
+
+EXPECTED      : Expected 2 inner join matches for keys 3 and 4.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Result row count and structure successfully match pandas inner join baseline.
+
+============================================================
+TEST CASE     : test_happy_path [radix_hash]
+============================================================
+INPUTS        :
+df1:
+   key val_a
+0    1     a
+1    2     b
+2    3     c
+3    4     d
+df2:
+   key val_b
+0    3     x
+1    4     y
+2    5     z
+3    6     w
+
+EXPECTED      : Expected 2 inner join matches for keys 3 and 4.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Result row count and structure successfully match pandas inner join baseline.
+
+============================================================
+TEST CASE     : test_happy_path [sort_merge]
+============================================================
+INPUTS        :
+df1:
+   key val_a
+0    1     a
+1    2     b
+2    3     c
+3    4     d
+df2:
+   key val_b
+0    3     x
+1    4     y
+2    5     z
+3    6     w
+
+EXPECTED      : Expected 2 inner join matches for keys 3 and 4.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Result row count and structure successfully match pandas inner join baseline.
+
+============================================================
+TEST CASE     : test_empty_relations [simple_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: [1, 2]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [grace_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: [1, 2]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [hybrid_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: [1, 2]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [radix_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: [1, 2]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [sort_merge]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: [1, 2]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [simple_hash]
+============================================================
+INPUTS        :
+df1_keys: [1, 2], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [grace_hash]
+============================================================
+INPUTS        :
+df1_keys: [1, 2], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [hybrid_hash]
+============================================================
+INPUTS        :
+df1_keys: [1, 2], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [radix_hash]
+============================================================
+INPUTS        :
+df1_keys: [1, 2], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [sort_merge]
+============================================================
+INPUTS        :
+df1_keys: [1, 2], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [simple_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [grace_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [hybrid_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [radix_hash]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_empty_relations [sort_merge]
+============================================================
+INPUTS        :
+df1_keys: [], df2_keys: []
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Properly handled empty relation input without throwing index errors, returning 0 rows.
+
+============================================================
+TEST CASE     : test_disjoint_keys [simple_hash]
+============================================================
+INPUTS        :
+df1 keys: [1,2,3], df2 keys: [4,5,6]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Correctly evaluated disjoint keys, yielding an empty dataset since no keys intersect.
+
+============================================================
+TEST CASE     : test_disjoint_keys [grace_hash]
+============================================================
+INPUTS        :
+df1 keys: [1,2,3], df2 keys: [4,5,6]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Correctly evaluated disjoint keys, yielding an empty dataset since no keys intersect.
+
+============================================================
+TEST CASE     : test_disjoint_keys [hybrid_hash]
+============================================================
+INPUTS        :
+df1 keys: [1,2,3], df2 keys: [4,5,6]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Correctly evaluated disjoint keys, yielding an empty dataset since no keys intersect.
+
+============================================================
+TEST CASE     : test_disjoint_keys [radix_hash]
+============================================================
+INPUTS        :
+df1 keys: [1,2,3], df2 keys: [4,5,6]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 4)
+STATUS        : PASS
+EXPLANATION   : Correctly evaluated disjoint keys, yielding an empty dataset since no keys intersect.
+
+============================================================
+TEST CASE     : test_disjoint_keys [sort_merge]
+============================================================
+INPUTS        :
+df1 keys: [1,2,3], df2 keys: [4,5,6]
+
+EXPECTED      : Empty dataframe output (0 rows).
+OUTPUT        : Shape: (0, 3)
+STATUS        : PASS
+EXPLANATION   : Correctly evaluated disjoint keys, yielding an empty dataset since no keys intersect.
+
+============================================================
+TEST CASE     : test_duplicate_keys_many_to_many [simple_hash]
+============================================================
+INPUTS        :
+df1 keys: [5,5], df2 keys: [5,5,5]
+
+EXPECTED      : Expected 6 rows (Cartesian product).
+OUTPUT        : Shape: (6, 3), Rows: 6
+STATUS        : PASS
+EXPLANATION   : Successfully performed many-to-many Cartesian product expansion (2 * 3 = 6 rows).
+
+============================================================
+TEST CASE     : test_duplicate_keys_many_to_many [grace_hash]
+============================================================
+INPUTS        :
+df1 keys: [5,5], df2 keys: [5,5,5]
+
+EXPECTED      : Expected 6 rows (Cartesian product).
+OUTPUT        : Shape: (6, 3), Rows: 6
+STATUS        : PASS
+EXPLANATION   : Successfully performed many-to-many Cartesian product expansion (2 * 3 = 6 rows).
+
+============================================================
+TEST CASE     : test_duplicate_keys_many_to_many [hybrid_hash]
+============================================================
+INPUTS        :
+df1 keys: [5,5], df2 keys: [5,5,5]
+
+EXPECTED      : Expected 6 rows (Cartesian product).
+OUTPUT        : Shape: (6, 3), Rows: 6
+STATUS        : PASS
+EXPLANATION   : Successfully performed many-to-many Cartesian product expansion (2 * 3 = 6 rows).
+
+============================================================
+TEST CASE     : test_duplicate_keys_many_to_many [radix_hash]
+============================================================
+INPUTS        :
+df1 keys: [5,5], df2 keys: [5,5,5]
+
+EXPECTED      : Expected 6 rows (Cartesian product).
+OUTPUT        : Shape: (6, 3), Rows: 6
+STATUS        : PASS
+EXPLANATION   : Successfully performed many-to-many Cartesian product expansion (2 * 3 = 6 rows).
+
+============================================================
+TEST CASE     : test_duplicate_keys_many_to_many [sort_merge]
+============================================================
+INPUTS        :
+df1 keys: [5,5], df2 keys: [5,5,5]
+
+EXPECTED      : Expected 6 rows (Cartesian product).
+OUTPUT        : Shape: (6, 3), Rows: 6
+STATUS        : PASS
+EXPLANATION   : Successfully performed many-to-many Cartesian product expansion (2 * 3 = 6 rows).
+
+============================================================
+TEST CASE     : test_null_values_in_key [simple_hash]
+============================================================
+INPUTS        :
+df1 keys: [1, NaN, 3], df2 keys: [1, 3, NaN]
+
+EXPECTED      : Expected 2 rows matching valid non-null keys.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Ignored NaN keys successfully and matched valid keys (1 and 3), returning 2 rows.
+
+============================================================
+TEST CASE     : test_null_values_in_key [grace_hash]
+============================================================
+INPUTS        :
+df1 keys: [1, NaN, 3], df2 keys: [1, 3, NaN]
+
+EXPECTED      : Expected 2 rows matching valid non-null keys.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Ignored NaN keys successfully and matched valid keys (1 and 3), returning 2 rows.
+
+============================================================
+TEST CASE     : test_null_values_in_key [hybrid_hash]
+============================================================
+INPUTS        :
+df1 keys: [1, NaN, 3], df2 keys: [1, 3, NaN]
+
+EXPECTED      : Expected 2 rows matching valid non-null keys.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Ignored NaN keys successfully and matched valid keys (1 and 3), returning 2 rows.
+
+============================================================
+TEST CASE     : test_null_values_in_key [radix_hash]
+============================================================
+INPUTS        :
+df1 keys: [1, NaN, 3], df2 keys: [1, 3, NaN]
+
+EXPECTED      : Expected 2 rows matching valid non-null keys.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Ignored NaN keys successfully and matched valid keys (1 and 3), returning 2 rows.
+
+============================================================
+TEST CASE     : test_null_values_in_key [sort_merge]
+============================================================
+INPUTS        :
+df1 keys: [1, NaN, 3], df2 keys: [1, 3, NaN]
+
+EXPECTED      : Expected 2 rows matching valid non-null keys.
+OUTPUT        : Shape: (2, 3), Rows: 2
+STATUS        : PASS
+EXPLANATION   : Ignored NaN keys successfully and matched valid keys (1 and 3), returning 2 rows.
+
+============================================================
+TEST CASE     : test_colliding_payload_columns [simple_hash]
+============================================================
+INPUTS        :
+Both relations contain a colliding 'val' column.
+
+EXPECTED      : Properly suffixed columns and 2 matching rows.
+OUTPUT        : Columns: ['key', 'val', 'val_left'], Rows: 2
+STATUS        : PASS
+EXPLANATION   : Handled identical column names cleanly using specified suffix configurations.
+
+============================================================
+TEST CASE     : test_colliding_payload_columns [grace_hash]
+============================================================
+INPUTS        :
+Both relations contain a colliding 'val' column.
+
+EXPECTED      : Properly suffixed columns and 2 matching rows.
+OUTPUT        : Columns: ['key', 'val', 'val_left'], Rows: 2
+STATUS        : PASS
+EXPLANATION   : Handled identical column names cleanly using specified suffix configurations.
+
+============================================================
+TEST CASE     : test_colliding_payload_columns [hybrid_hash]
+============================================================
+INPUTS        :
+Both relations contain a colliding 'val' column.
+
+EXPECTED      : Properly suffixed columns and 2 matching rows.
+OUTPUT        : Columns: ['key', 'val', 'val_left'], Rows: 2
+STATUS        : PASS
+EXPLANATION   : Handled identical column names cleanly using specified suffix configurations.
+
+============================================================
+TEST CASE     : test_colliding_payload_columns [radix_hash]
+============================================================
+INPUTS        :
+Both relations contain a colliding 'val' column.
+
+EXPECTED      : Properly suffixed columns and 2 matching rows.
+OUTPUT        : Columns: ['key', 'val', 'val_left'], Rows: 2
+STATUS        : PASS
+EXPLANATION   : Handled identical column names cleanly using specified suffix configurations.
+
+============================================================
+TEST CASE     : test_colliding_payload_columns [sort_merge]
+============================================================
+INPUTS        :
+Both relations contain a colliding 'val' column.
+
+EXPECTED      : Properly suffixed columns and 2 matching rows.
+OUTPUT        : Columns: ['key', 'val_left', 'val'], Rows: 2
+STATUS        : PASS
+EXPLANATION   : Handled identical column names cleanly using specified suffix configurations.
+
