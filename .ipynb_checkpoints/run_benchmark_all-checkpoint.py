@@ -151,36 +151,96 @@ def run_comprehensive_benchmark():
         evaluate_and_record("Exp3_Selectivity", "Q_matrix", params, tables, plan)
 
     # =========================================================================
-    # EXPERIMENT 4: Star-Join Skew Impact (Multi-step query plan)
+    # EXPERIMENTS 4a, 4b, 4c: Star Joins (Q_star)
     if hasattr(generator, "generate_star_query"):
-        report_lines.append("\n--- EXPERIMENT 4: Star-Join Skew Impact (Q_star) ---")
-        star_skew_values = [0.0, 1.5]
-        for z in star_skew_values:
-            print(f"Running Experiment 4 [Star Join] with skew={z}...")
-            center, leaves = generator.generate_star_query(N=50_000, num_leaves=2, domain_center_b=500, skew_b=z)
+        
+        # EXPERIMENT 4a: Skew Impact (Q_star)
+        report_lines.append("\n--- EXPERIMENT 4a: Skew Impact (Q_star) ---")
+        star_skews = [0.0, 0.8, 1.2, 1.5]
+        for z in star_skews:
+            print(f"Running Experiment 4a [Star Skew] with z={z}...")
+            center, leaves = generator.generate_star_query(N=50_000, num_leaves=2, domain_center_b=1_000, skew_b=z)
             tables = {'center': center, 'leaf_0': leaves[0], 'leaf_1': leaves[1]}
-            # Multi-step join plan mapping step execution order
             plan = [
                 {'left': 'center', 'right': 'leaf_0', 'on': 'B', 'lsuffix': '_c', 'rsuffix': '_l0'},
                 {'left': 'intermediate_step_0', 'right': 'leaf_1', 'on': 'B', 'lsuffix': '_step0', 'rsuffix': '_l1'}
             ]
-            params = {"skew_z": z, "N": 50_000}
-            evaluate_and_record("Exp4_Star_Skew", "Q_star", params, tables, plan)
+            params = {"num_tuples_N": 50_000, "skew_z": z}
+            evaluate_and_record("Exp4a_Star_Skew", "Q_star", params, tables, plan)
+
+        # EXPERIMENT 4b: Scalability Impact (Q_star)
+        report_lines.append("\n--- EXPERIMENT 4b: Scalability Impact (Q_star) ---")
+        star_n_values = [10_000, 100_000, 500_000]
+        for N in star_n_values:
+            print(f"Running Experiment 4b [Star Scalability] with N={N}...")
+            center, leaves = generator.generate_star_query(N=N, num_leaves=2, domain_center_b=1_000, skew_b=1.0)
+            tables = {'center': center, 'leaf_0': leaves[0], 'leaf_1': leaves[1]}
+            plan = [
+                {'left': 'center', 'right': 'leaf_0', 'on': 'B', 'lsuffix': '_c', 'rsuffix': '_l0'},
+                {'left': 'intermediate_step_0', 'right': 'leaf_1', 'on': 'B', 'lsuffix': '_step0', 'rsuffix': '_l1'}
+            ]
+            params = {"num_tuples_N": N, "skew_z": 1.0}
+            evaluate_and_record("Exp4b_Star_Scalability", "Q_star", params, tables, plan)
+
+        # EXPERIMENT 4c: Selectivity Impact (Q_star)
+        report_lines.append("\n--- EXPERIMENT 4c: Selectivity Impact (Q_star) ---")
+        star_nb_values = [100, 1_000, 10_000]
+        for n_B in star_nb_values:
+            print(f"Running Experiment 4c [Star Selectivity] with domain size={n_B}...")
+            center, leaves = generator.generate_star_query(N=50_000, num_leaves=2, domain_center_b=n_B, skew_b=1.0)
+            tables = {'center': center, 'leaf_0': leaves[0], 'leaf_1': leaves[1]}
+            plan = [
+                {'left': 'center', 'right': 'leaf_0', 'on': 'B', 'lsuffix': '_c', 'rsuffix': '_l0'},
+                {'left': 'intermediate_step_0', 'right': 'leaf_1', 'on': 'B', 'lsuffix': '_step0', 'rsuffix': '_l1'}
+            ]
+            params = {"num_tuples_N": 50_000, "n_B": n_B, "skew_z": 1.0}
+            evaluate_and_record("Exp4c_Star_Selectivity", "Q_star", params, tables, plan)
 
     # =========================================================================
-    # EXPERIMENT 5: Line-Join Intermediate Explosion Test (Multi-step query plan)
+    # EXPERIMENTS 5a, 5b, 5c: Acyclic / Line Joins (Q_line)
     if hasattr(generator, "generate_acyclic_path_query"):
-        report_lines.append("\n--- EXPERIMENT 5: Line-Join Intermediate Explosion (Q_line) ---")
-        line_domains = [10_000, 100, 10_000] 
-        path_relations = generator.generate_acyclic_path_query(
-            N=50_000, path_length=2, domain_sizes=line_domains, skew_factors=[1.0, 1.0]
-        )
-        tables = {'R1': path_relations[0], 'R2': path_relations[1]}
-        plan = [
-            {'left': 'R1', 'right': 'R2', 'on': 'X_1', 'lsuffix': '_r1', 'rsuffix': '_r2'}
-        ]
-        params = {"mid_domain_size": line_domains[1], "N": 50_000}
-        evaluate_and_record("Exp5_Line_Explosion", "Q_line", params, tables, plan)
+        
+        # EXPERIMENT 5a: Skew Impact (Q_line)
+        report_lines.append("\n--- EXPERIMENT 5a: Skew Impact (Q_line) ---")
+        line_skews = [0.0, 0.8, 1.2, 1.5]
+        for z in line_skews:
+            print(f"Running Experiment 5a [Line Skew] with z={z}...")
+            line_domains = [10_000, 1_000, 10_000]
+            path_relations = generator.generate_acyclic_path_query(
+                N=50_000, path_length=2, domain_sizes=line_domains, skew_factors=[z, z]
+            )
+            tables = {'R1': path_relations[0], 'R2': path_relations[1]}
+            plan = [{'left': 'R1', 'right': 'R2', 'on': 'X_1', 'lsuffix': '_r1', 'rsuffix': '_r2'}]
+            params = {"num_tuples_N": 50_000, "skew_z": z}
+            evaluate_and_record("Exp5a_Line_Skew", "Q_line", params, tables, plan)
+
+        # EXPERIMENT 5b: Scalability Impact (Q_line)
+        report_lines.append("\n--- EXPERIMENT 5b: Scalability Impact (Q_line) ---")
+        line_n_values = [10_000, 100_000, 500_000]
+        for N in line_n_values:
+            print(f"Running Experiment 5b [Line Scalability] with N={N}...")
+            line_domains = [10_000, 1_000, 10_000]
+            path_relations = generator.generate_acyclic_path_query(
+                N=N, path_length=2, domain_sizes=line_domains, skew_factors=[1.0, 1.0]
+            )
+            tables = {'R1': path_relations[0], 'R2': path_relations[1]}
+            plan = [{'left': 'R1', 'right': 'R2', 'on': 'X_1', 'lsuffix': '_r1', 'rsuffix': '_r2'}]
+            params = {"num_tuples_N": N, "skew_z": 1.0}
+            evaluate_and_record("Exp5b_Line_Scalability", "Q_line", params, tables, plan)
+
+        # EXPERIMENT 5c: Selectivity Impact (Q_line)
+        report_lines.append("\n--- EXPERIMENT 5c: Selectivity Impact (Q_line) ---")
+        line_mid_domains = [10_000, 100, 10_000] # Smaller middle domain = higher join explosion
+        for mid_domain in [100, 1_000, 5_000]:
+            print(f"Running Experiment 5c [Line Selectivity] with mid_domain={mid_domain}...")
+            line_domains = [10_000, mid_domain, 10_000]
+            path_relations = generator.generate_acyclic_path_query(
+                N=50_000, path_length=2, domain_sizes=line_domains, skew_factors=[1.0, 1.0]
+            )
+            tables = {'R1': path_relations[0], 'R2': path_relations[1]}
+            plan = [{'left': 'R1', 'right': 'R2', 'on': 'X_1', 'lsuffix': '_r1', 'rsuffix': '_r2'}]
+            params = {"num_tuples_N": 50_000, "mid_domain_size": mid_domain, "skew_z": 1.0}
+            evaluate_and_record("Exp5c_Line_Selectivity", "Q_line", params, tables, plan)
 
     # Write out reports to root folder
     with open(REPORT_TXT, "w", encoding="utf-8") as f:
