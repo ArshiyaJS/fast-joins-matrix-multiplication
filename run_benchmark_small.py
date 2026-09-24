@@ -148,7 +148,7 @@ def run_comprehensive_benchmark():
     # =========================================================================
     # EXPERIMENT 1: Skew Impact (Q_matrix Binary Join)
     def exp1_logic(eval_func):
-        skew_values = [0.0, 0.8, 1.2, 1.5]
+        skew_values = [0.0, 0.8, 1.2]
         for z in skew_values:
             print(f"Running Exp1_Skew with z={z}...")
             R, S = generator.generate_matrix_query(N=1_000, n_A=500, n_B=100, n_C=500, skew_b=z)
@@ -164,7 +164,7 @@ def run_comprehensive_benchmark():
     # =========================================================================
     # EXPERIMENT 2: Scalability Impact (Q_matrix Binary Join)
     def exp2_logic(eval_func):
-        n_values = [500, 1_500, 3_000]
+        n_values = [50, 1_50, 3_00]
         scalability_skews = [0.0, 1.2]
         for N in n_values:
             for z in scalability_skews:
@@ -199,7 +199,7 @@ def run_comprehensive_benchmark():
     # EXPERIMENT 4a: Skew Impact (Q_star)
     if hasattr(generator, "generate_star_query"):
         def exp4a_logic(eval_func):
-            star_skews = [0.0, 0.8, 1.2, 1.5]
+            star_skews = [0.0, 0.8, 1.2]
             for z in star_skews:
                 print(f"Running Exp4a_Star_Skew with z={z}...")
                 center, leaves = generator.generate_star_query(N=1_000, num_leaves=2, domain_center_b=100, skew_b=z)
@@ -216,7 +216,7 @@ def run_comprehensive_benchmark():
         run_single_experiment("Exp4a_Star_Skew", "Q_star", exp4a_logic)
 
         def exp4b_logic(eval_func):
-            star_n_values = [500, 1_500, 3_000]
+            star_n_values = [50, 1_50, 3_00]
             for N in star_n_values:
                 print(f"Running Exp4b_Star_Scalability with N={N}...")
                 center, leaves = generator.generate_star_query(N=N, num_leaves=2, domain_center_b=100, skew_b=1.0)
@@ -253,7 +253,7 @@ def run_comprehensive_benchmark():
     # EXPERIMENT 5a: Skew Impact (Q_line)
     if hasattr(generator, "generate_acyclic_path_query"):
         def exp5a_logic(eval_func):
-            line_skews = [0.0, 0.8, 1.2, 1.5]
+            line_skews = [0.0, 0.8, 1.2]
             for z in line_skews:
                 print(f"Running Exp5a_Line_Skew with z={z}...")
                 line_domains = [500, 100, 500]
@@ -270,7 +270,7 @@ def run_comprehensive_benchmark():
         run_single_experiment("Exp5a_Line_Skew", "Q_line", exp5a_logic)
 
         def exp5b_logic(eval_func):
-            line_n_values = [500, 1_500, 3_000]
+            line_n_values = [50, 1_50, 3_00]
             for N in line_n_values:
                 print(f"Running Exp5b_Line_Scalability with N={N}...")
                 line_domains = [500, 100, 500]

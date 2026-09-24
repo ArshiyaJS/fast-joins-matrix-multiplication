@@ -1,0 +1,40 @@
+============================================================
+    BENCHMARK REPORT: Exp4c_Star_Selectivity (Q_star)        
+============================================================
+
+[Exp4c_Star_Selectivity | Q_star] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=247.0309s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=248.6537s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=250.1389s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=248.5063s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=257.0614s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=261.7381s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=262.4116s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=252.8558s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=248.2186s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=250.4752s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=2516.3794s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=pandas       | Partitions=N/A | Status=PASS | Time=4.3436s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=251.9052s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=248.9817s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=250.9046s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=239.9080s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=266.3101s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=260.5206s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=243.6372s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=249.7130s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=250.3925s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=245.9995s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=2469.5465s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=pandas       | Partitions=N/A | Status=PASS | Time=4.1776s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=258.5896s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=229.2091s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=230.8362s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=239.5077s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=263.5460s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=271.0081s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=262.1282s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=251.3001s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=239.7361s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=245.5791s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=2476.7523s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=pandas       | Partitions=N/A | Status=PASS | Time=4.3043s | Notes=None

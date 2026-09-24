@@ -1,0 +1,40 @@
+============================================================
+    BENCHMARK REPORT: Exp4b_Star_Scalability (Q_star)        
+============================================================
+
+[Exp4b_Star_Scalability | Q_star] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.0314s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.0518s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.0367s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.0354s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.0341s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.0413s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.0342s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.0367s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.0347s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.0933s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=0.4226s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0061s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.7124s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.6807s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.6438s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.5843s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.6124s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.6311s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.6823s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.5913s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.5663s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.5803s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=7.9342s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.1143s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=4.4767s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=4.5688s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=4.5485s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=4.5597s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=4.8179s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=4.7821s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=4.8362s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=4.6349s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=4.6986s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=4.7149s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=63.4815s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.1961s | Notes=None

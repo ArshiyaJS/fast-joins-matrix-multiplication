@@ -1,0 +1,40 @@
+============================================================
+    BENCHMARK REPORT: Exp5b_Line_Scalability (Q_line)        
+============================================================
+
+[Exp5b_Line_Scalability | Q_line] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.0014s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.0059s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.0083s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.0060s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.0058s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.0073s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.0062s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.0072s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.0072s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.0140s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=0.0060s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0021s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.0035s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.0097s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.0103s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.0075s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.0070s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.0116s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.0089s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.0102s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.0088s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.0132s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=0.0135s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0017s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.0025s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.0121s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.0100s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.0093s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.0100s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.0137s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.0143s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.0264s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.0144s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.0147s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=0.0497s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0020s | Notes=None
