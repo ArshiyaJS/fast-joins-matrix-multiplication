@@ -12,6 +12,16 @@ def simple_hash_join(
     rsuffix: str = '_right',
     **kwargs
 ) -> Tuple[pd.DataFrame, Dict]:
+
+    diagnostics = {'build_table_size': len(df1), 'probe_table_size': len(df2)}
+
+    # --- SAFETY GUARD FOR EMPTY DATAFRAMES ---
+    if df1.empty or df2.empty:
+        # Construct expected output schema safely
+        cols1 = [c + lsuffix if c == key else c for c in df1.columns] # or standard collision logic
+        cols2 = list(df2.columns)
+        return pd.DataFrame(columns=cols2 + [c for c in df1.columns if c != key]), diagnostics
+    
     """
     Performs a classic in-memory hash join with column collision handling.
     """

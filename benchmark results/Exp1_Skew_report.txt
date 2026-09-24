@@ -1,0 +1,52 @@
+============================================================
+    BENCHMARK REPORT: Exp1_Skew (Q_matrix)        
+============================================================
+
+[Exp1_Skew | Q_matrix] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.0248s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.0354s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.0300s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.0306s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.0348s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.0271s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.0322s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.0382s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.0368s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.0381s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=0.3221s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0059s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.4293s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.4363s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.4598s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.4508s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.4369s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.4600s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.4465s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.4222s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.4317s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.4333s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=6.8491s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0160s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.6609s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.6687s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.6725s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.6673s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.6716s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.6664s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.6604s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.7058s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.6791s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.6903s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=10.0333s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0259s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=simple_hash  | Partitions=N/A | Status=PASS | Time=0.8365s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  4 | Status=PASS | Time=0.7934s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions=  8 | Status=PASS | Time=0.8198s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=grace_hash   | Partitions= 16 | Status=PASS | Time=0.8322s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  4 | Status=PASS | Time=0.8161s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions=  8 | Status=PASS | Time=0.7961s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=hybrid_hash  | Partitions= 16 | Status=PASS | Time=0.8242s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  4 | Status=PASS | Time=0.8605s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions=  8 | Status=PASS | Time=0.8383s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=radix_hash   | Partitions= 16 | Status=PASS | Time=0.8501s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=sort_merge   | Partitions=N/A | Status=PASS | Time=12.5947s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=pandas       | Partitions=N/A | Status=PASS | Time=0.0283s | Notes=None
