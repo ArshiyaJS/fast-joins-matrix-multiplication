@@ -1,37 +1,4 @@
 experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,n_B,skew_z
-Exp3_Selectivity,Q_matrix,simple_hash,,PASS,0.3887050151824951,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,4.0,PASS,0.41413331031799316,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,8.0,PASS,0.4070584774017334,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,16.0,PASS,0.4049642086029053,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,4.0,PASS,0.3832590579986572,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,8.0,PASS,0.36724376678466797,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,16.0,PASS,0.3557770252227783,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,4.0,PASS,0.411163330078125,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,8.0,PASS,0.40897607803344727,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,16.0,PASS,0.4077291488647461,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,sort_merge,,PASS,6.506945848464966,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,pandas,,PASS,0.028656959533691406,376703,0.0,,1000,30,1.0
-Exp3_Selectivity,Q_matrix,simple_hash,,PASS,0.386660099029541,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,4.0,PASS,0.4043416976928711,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,8.0,PASS,0.37468695640563965,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,16.0,PASS,0.38126206398010254,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,4.0,PASS,0.4591536521911621,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,8.0,PASS,0.38373470306396484,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,16.0,PASS,0.36228108406066895,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,4.0,PASS,0.39675450325012207,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,8.0,PASS,0.3867511749267578,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,16.0,PASS,0.3930079936981201,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,sort_merge,,PASS,5.8790764808654785,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,pandas,,PASS,0.011514902114868164,376141,0.0,,1000,100,1.0
-Exp3_Selectivity,Q_matrix,simple_hash,,PASS,0.3742058277130127,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,4.0,PASS,0.38341712951660156,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,8.0,PASS,0.38157081604003906,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,grace_hash,16.0,PASS,0.38262200355529785,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,4.0,PASS,0.37842535972595215,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,8.0,PASS,0.3882904052734375,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,hybrid_hash,16.0,PASS,0.3992278575897217,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,4.0,PASS,0.4094388484954834,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,8.0,PASS,0.3993110656738281,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,radix_hash,16.0,PASS,0.3829460144042969,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,sort_merge,,PASS,6.274127244949341,376114,0.0,,1000,400,1.0
-Exp3_Selectivity,Q_matrix,pandas,,PASS,0.020464181900024414,376114,0.0,,1000,400,1.0
+Exp3_Selectivity,Q_matrix,leapfrog,,FAIL,0.40560173988342285,150019,0.0,"Length mismatch: got 150019, expected 376703",1000,30,1.0
+Exp3_Selectivity,Q_matrix,leapfrog,,FAIL,0.38840627670288086,149457,0.0,"Length mismatch: got 149457, expected 376141",1000,100,1.0
+Exp3_Selectivity,Q_matrix,leapfrog,,FAIL,0.41112804412841797,149430,0.0,"Length mismatch: got 149430, expected 376114",1000,400,1.0

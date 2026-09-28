@@ -1,0 +1,4 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,mid_domain_size,skew_z
+Exp5c_Line_Selectivity,Q_line,leapfrog,,PASS,0.707059383392334,34291,0.0,,1000,30,1.0
+Exp5c_Line_Selectivity,Q_line,leapfrog,,PASS,0.36878085136413574,10719,0.0,,1000,100,1.0
+Exp5c_Line_Selectivity,Q_line,leapfrog,,PASS,0.17957091331481934,3380,0.0,,1000,400,1.0

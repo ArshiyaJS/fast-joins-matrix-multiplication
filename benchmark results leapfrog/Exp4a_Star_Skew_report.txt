@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp4a_Star_Skew (Q_star)        
+============================================================
+
+[Exp4a_Star_Skew | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=14.8797s | Notes=None
+[Exp4a_Star_Skew | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=4431.9521s | Notes=None
+[Exp4a_Star_Skew | Q_star] Algo=leapfrog     | Partitions=N/A | Status=FAIL | Time=0.0000s | Notes=Unable to allocate 1.45 GiB for an array with shape (194207538,) and data type int64

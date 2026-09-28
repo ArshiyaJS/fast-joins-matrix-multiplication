@@ -112,34 +112,67 @@ class RobustGeneralLFTJEngine:
 
     def _get_candidates_for_variable(self, var: str, partial_assignment: Dict[str, Any]) -> np.ndarray:
         """
-        Robust Candidate Retrieval: Intersects candidate streams across all relations containing `var`.
-        Patched to filter by ALL already-bound variables in the relation (preventing cyclic false positives).
+        Robust Candidate Retrieval: Uses pre-built MultiIndexes and C-optimized .get_loc() slices
+        for fast prefix lookups, avoiding slow sequential DataFrame filtering loops.
         """
         active_streams = []
         
         for rel in self.query:
             name = rel['name']
-            attrs = self.indexed_relations[name]['attrs']
+            rel_info = self.indexed_relations[name]
+            attrs = rel_info['attrs']
             
             if var in attrs:
-                raw_df = self.indexed_relations[name]['raw_df']
+                indices = rel_info['indices']
                 
-                # Identify ALL attributes in this relation that are currently bound in partial_assignment
+                # Determine the longest contiguous prefix of attrs starting from attrs[0] present in partial_assignment
+                k = 0
+                while k < len(attrs) and attrs[k] in partial_assignment:
+                    k += 1
+                
+                sub_df = None
+                if k > 0:
+                    prefix_attrs = tuple(attrs[:k])
+                    key = tuple(partial_assignment[attrs[i]] for i in range(k))
+                    index_info = indices.get(prefix_attrs)
+                    
+                    if index_info is not None:
+                        sorted_df = index_info['df']
+                        if index_info['type'] == 'multi':
+                            m_idx = index_info['index']
+                            try:
+                                loc = m_idx.get_loc(key)
+                                sub_df = sorted_df.iloc[loc]
+                            except KeyError:
+                                sub_df = pd.DataFrame(columns=attrs)
+                        else:  # single attribute index
+                            vals = index_info['values']
+                            val = key[0]
+                            idx = np.searchsorted(vals, val, side='left')
+                            if idx < len(vals) and vals[idx] == val:
+                                start_idx = np.searchsorted(sorted_df[prefix_attrs[0]], val, side='left')
+                                end_idx = np.searchsorted(sorted_df[prefix_attrs[0]], val, side='right')
+                                sub_df = sorted_df.iloc[start_idx:end_idx]
+                            else:
+                                sub_df = pd.DataFrame(columns=attrs)
+                
+                if sub_df is None:
+                    sub_df = rel_info['raw_df']
+                
+                # Filter any remaining bound attributes not covered by the primary prefix
                 bound_conditions = {
                     attr: partial_assignment[attr] 
                     for attr in attrs 
-                    if attr in partial_assignment
+                    if attr in partial_assignment and (sub_df is rel_info['raw_df'] or attr not in attrs[:k])
                 }
                 
-                # Dynamically filter the relation table using all bound attributes
-                sub_df = raw_df
-                for attr, val in bound_conditions.items():
-                    sub_df = sub_df[sub_df[attr] == val]
+                if bound_conditions and not sub_df.empty:
+                    for attr, val in bound_conditions.items():
+                        sub_df = sub_df[sub_df[attr] == val]
                 
                 if sub_df.empty:
-                    return np.array([]) # Pruned branch
+                    return np.array([])
                 
-                # Extract unique sorted candidate values for `var` from the filtered subset
                 candidates = np.sort(sub_df[var].unique())
                 active_streams.append(candidates)
 
@@ -198,7 +231,23 @@ class RobustGeneralLFTJEngine:
 
         def recursive_join(var_idx: int, current_assignment: Dict[str, Any]):
             if var_idx == len(self.variable_order):
-                results.append(current_assignment.copy())
+                # Bag Semantics Multiplicity Calculation:
+                # Multiply the occurrence count of this binding tuple across all base relations
+                mult = 1
+                for rel in self.query:
+                    raw_df = rel['table']
+                    mask = np.ones(len(raw_df), dtype=bool)
+                    for attr, val in current_assignment.items():
+                        if attr in raw_df.columns:
+                            mask &= (raw_df[attr].to_numpy() == val)
+                    count = mask.sum()
+                    mult *= count
+                    if mult == 0:
+                        break
+                
+                if mult > 0:
+                    for _ in range(mult):
+                        results.append(current_assignment.copy())
                 return
 
             current_var = self.variable_order[var_idx]
@@ -213,8 +262,8 @@ class RobustGeneralLFTJEngine:
 
         df_out = pd.DataFrame(results)
         diagnostics = {
-            "info": "Robust General LFTJ Engine Executed",
+            "info": "Robust General LFTJ Engine Executed with Bag Semantics",
             "variable_order": self.variable_order,
             "output_rows": len(df_out)
         }
-        return df_out, diagnostics
+        return df_out, diagnostics  

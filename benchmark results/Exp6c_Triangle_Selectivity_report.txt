@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp6c_Triangle_Selectivity (Q_triangle)        
+============================================================
+
+[Exp6c_Triangle_Selectivity | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0567s | Notes=None
+[Exp6c_Triangle_Selectivity | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0740s | Notes=None
+[Exp6c_Triangle_Selectivity | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0704s | Notes=None

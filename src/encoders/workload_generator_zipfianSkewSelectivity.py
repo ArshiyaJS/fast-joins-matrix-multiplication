@@ -106,3 +106,42 @@ class MultiTopologyWorkloadGenerator:
             )
             relations.append(df)
         return relations
+
+    def generate_triangle_query(
+        self,
+        N: int,
+        n_A: int,
+        n_B: int,
+        n_C: int,
+        skew_factor: float
+    ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+        """
+        Generates Q_triangle: R(A, B) ⨝ S(B, C) ⨝ T(C, A)
+        
+        Parameters:
+        - N: Number of tuples per relation.
+        - n_A, n_B, n_C: Domain sizes for attributes A, B, and C respectively.
+        - skew_factor: Controls the Zipfian skew intensity across the relations.
+        """
+        # Relation R with attributes A and B
+        R = generate_zipfian_relation(
+            num_tuples=N, domain_size_A=n_A, domain_size_B=n_B,
+            skew_factor_B=skew_factor, col_A_name='A', col_B_name='B',
+            seed=self.base_seed
+        )
+        
+        # Relation S with attributes B and C
+        S = generate_zipfian_relation(
+            num_tuples=N, domain_size_A=n_B, domain_size_B=n_C,
+            skew_factor_B=skew_factor, col_A_name='B', col_B_name='C',
+            seed=self.base_seed + 1
+        )
+        
+        # Relation T with attributes C and A
+        T = generate_zipfian_relation(
+            num_tuples=N, domain_size_A=n_C, domain_size_B=n_A,
+            skew_factor_B=skew_factor, col_A_name='C', col_B_name='A',
+            seed=self.base_seed + 2
+        )
+        
+        return R, S, T
