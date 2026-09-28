@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp3_Selectivity (Q_matrix)        
+============================================================
+
+[Exp3_Selectivity | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=22.8293s | Notes=None
+[Exp3_Selectivity | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=18.1620s | Notes=None
+[Exp3_Selectivity | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=18.0847s | Notes=None

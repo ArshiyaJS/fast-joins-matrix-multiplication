@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp5c_Line_Selectivity (Q_line)        
+============================================================
+
+[Exp5c_Line_Selectivity | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.7071s | Notes=None
+[Exp5c_Line_Selectivity | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.3688s | Notes=None
+[Exp5c_Line_Selectivity | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.1796s | Notes=None

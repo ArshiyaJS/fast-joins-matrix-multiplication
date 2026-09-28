@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp6a_Triangle_Skew (Q_triangle)        
+============================================================
+
+[Exp6a_Triangle_Skew | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.3758s | Notes=None
+[Exp6a_Triangle_Skew | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0981s | Notes=None
+[Exp6a_Triangle_Skew | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0710s | Notes=None

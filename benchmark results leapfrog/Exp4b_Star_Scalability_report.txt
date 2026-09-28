@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp4b_Star_Scalability (Q_star)        
+============================================================
+
+[Exp4b_Star_Scalability | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.6262s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=17.4936s | Notes=None
+[Exp4b_Star_Scalability | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=111.3896s | Notes=None

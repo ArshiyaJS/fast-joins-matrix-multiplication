@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp1_Skew (Q_matrix)        
+============================================================
+
+[Exp1_Skew | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=1.3272s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=21.0511s | Notes=None
+[Exp1_Skew | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=20.7210s | Notes=None

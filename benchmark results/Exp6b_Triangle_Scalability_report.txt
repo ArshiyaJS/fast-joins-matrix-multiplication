@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp6b_Triangle_Scalability (Q_triangle)        
+============================================================
+
+[Exp6b_Triangle_Scalability | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0185s | Notes=None
+[Exp6b_Triangle_Scalability | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0528s | Notes=None
+[Exp6b_Triangle_Scalability | Q_triangle] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0660s | Notes=None

@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp5b_Line_Scalability (Q_line)        
+============================================================
+
+[Exp5b_Line_Scalability | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0100s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0300s | Notes=None
+[Exp5b_Line_Scalability | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0890s | Notes=None

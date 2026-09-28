@@ -1,0 +1,4 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,skew_z
+Exp4b_Star_Scalability,Q_star,leapfrog,,PASS,0.6261963844299316,19586,0.0,,50,1.0
+Exp4b_Star_Scalability,Q_star,leapfrog,,PASS,17.493624687194824,513238,0.0,,150,1.0
+Exp4b_Star_Scalability,Q_star,leapfrog,,PASS,111.3896472454071,4306073,0.0,,300,1.0

@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp5a_Line_Skew (Q_line)        
+============================================================
+
+[Exp5a_Line_Skew | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=1.0517s | Notes=None
+[Exp5a_Line_Skew | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.3943s | Notes=None
+[Exp5a_Line_Skew | Q_line] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.3291s | Notes=None

@@ -1,0 +1,4 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,skew_z
+Exp4a_Star_Skew,Q_star,leapfrog,,PASS,14.87971806526184,64700,0.0,,1000,0.0
+Exp4a_Star_Skew,Q_star,leapfrog,,PASS,4431.952107191086,100405870,0.0,,1000,0.8
+Exp4a_Star_Skew,Q_star,leapfrog,,FAIL,0.0,0,0.0,"Unable to allocate 1.45 GiB for an array with shape (194207538,) and data type int64",1000,1.2

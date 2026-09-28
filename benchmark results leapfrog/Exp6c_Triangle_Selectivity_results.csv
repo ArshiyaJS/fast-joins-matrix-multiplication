@@ -1,0 +1,4 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,domain_size
+Exp6c_Triangle_Selectivity,Q_triangle,leapfrog,,PASS,0.100616455078125,435,0.0,,1000,30
+Exp6c_Triangle_Selectivity,Q_triangle,leapfrog,,PASS,0.1097571849822998,432,0.0,,1000,100
+Exp6c_Triangle_Selectivity,Q_triangle,leapfrog,,PASS,0.1109015941619873,432,0.0,,1000,300

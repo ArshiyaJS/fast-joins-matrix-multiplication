@@ -1,0 +1,7 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,n_B,skew_z
+Exp2_Scalability,Q_matrix,leapfrog,,PASS,0.016663312911987305,20,0.0,,50,100,0.0
+Exp2_Scalability,Q_matrix,leapfrog,,PASS,0.056273460388183594,1264,0.0,,50,100,1.2
+Exp2_Scalability,Q_matrix,leapfrog,,PASS,0.06641125679016113,226,0.0,,150,100,0.0
+Exp2_Scalability,Q_matrix,leapfrog,,PASS,0.3492929935455322,10392,0.0,,150,100,1.2
+Exp2_Scalability,Q_matrix,leapfrog,,PASS,0.18769502639770508,880,0.0,,300,100,0.0
+Exp2_Scalability,Q_matrix,leapfrog,,PASS,2.063568592071533,42035,0.0,,300,100,1.2

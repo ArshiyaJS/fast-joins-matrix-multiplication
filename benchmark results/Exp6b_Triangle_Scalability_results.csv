@@ -1,0 +1,4 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,skew_z
+Exp6b_Triangle_Scalability,Q_triangle,leapfrog,,PASS,0.018466949462890625,52,0.0,,100,1.0
+Exp6b_Triangle_Scalability,Q_triangle,leapfrog,,PASS,0.052841901779174805,224,0.0,,500,1.0
+Exp6b_Triangle_Scalability,Q_triangle,leapfrog,,PASS,0.06595540046691895,432,0.0,,1000,1.0

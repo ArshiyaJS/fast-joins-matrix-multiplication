@@ -1,0 +1,10 @@
+============================================================
+    BENCHMARK REPORT: Exp2_Scalability (Q_matrix)        
+============================================================
+
+[Exp2_Scalability | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0167s | Notes=None
+[Exp2_Scalability | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0563s | Notes=None
+[Exp2_Scalability | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.0664s | Notes=None
+[Exp2_Scalability | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.3493s | Notes=None
+[Exp2_Scalability | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=0.1877s | Notes=None
+[Exp2_Scalability | Q_matrix] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=2.0636s | Notes=None

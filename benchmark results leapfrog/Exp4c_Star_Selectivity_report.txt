@@ -1,0 +1,7 @@
+============================================================
+    BENCHMARK REPORT: Exp4c_Star_Selectivity (Q_star)        
+============================================================
+
+[Exp4c_Star_Selectivity | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=5260.6183s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=5222.4273s | Notes=None
+[Exp4c_Star_Selectivity | Q_star] Algo=leapfrog     | Partitions=N/A | Status=PASS | Time=5274.9107s | Notes=None

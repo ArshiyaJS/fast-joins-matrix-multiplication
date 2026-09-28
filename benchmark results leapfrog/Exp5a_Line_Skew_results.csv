@@ -1,0 +1,4 @@
+experiment,topology,algorithm,num_partitions,status,execution_time_sec,output_rows,partition_skew_metric,error,num_tuples_N,skew_z
+Exp5a_Line_Skew,Q_line,leapfrog,,PASS,1.0517337322235107,10034,0.0,,1000,0.0
+Exp5a_Line_Skew,Q_line,leapfrog,,PASS,0.39429569244384766,10682,0.0,,1000,0.8
+Exp5a_Line_Skew,Q_line,leapfrog,,PASS,0.32912254333496094,10786,0.0,,1000,1.2
